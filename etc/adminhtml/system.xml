@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="betterpopup" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <group id="what_to_show" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="show_cms_block" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Use CMS Block as Popup Content</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="cms_block" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>CMS Block</label>
+                    <source_model>Magento\Cms\Model\Config\Source\Block</source_model>
+                    <depends>
+                        <field id="show_cms_block">1</field>
+                    </depends>
+                </field>
+                <field id="template" translate="label comment button_label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Template</label>
+                    <button_label>Load HTML</button_label>
+                    <frontend_model>Mageplaza\BetterPopup\Block\Adminhtml\System\Config\Template</frontend_model>
+                    <comment>Select a template, then click to Load HTML.</comment>
+                    <frontend_class>hidden</frontend_class>
+                    <depends>
+                        <field id="show_cms_block">0</field>
+                    </depends>
+                </field>
+                <field id="html_content" sortOrder="10" type="textarea" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Content</label>
+                    <comment>HTML content</comment>
+                    <frontend_class>hidden</frontend_class>
+                    <depends>
+                        <field id="show_cms_block">0</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
