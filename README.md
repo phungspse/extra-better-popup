@@ -8,5 +8,5 @@ Go to Stores > Configuration > Mageplaza extensions > Better Popup to config.
 The result:
 ![image](https://user-images.githubusercontent.com/101688240/159152947-0bbb1e44-7c50-421e-b954-3b2066b061e7.png)
 
-If this extension can help your business and make you happy, you can donate me a cup of coffee. :D 
+If this extension can help your business and make you happy, you can treat me to a cup of coffee. :D 
 https://paypal.me/phung1470
